@@ -1,0 +1,35 @@
+<%- include ("partials/header") %>
+
+<ul> 
+  <h4>We found the following results for "<%= query %>"</h4>
+  <p>Touch on the images for more info.</p>
+  <p>Then touch on the title to view the poster.</p>
+    <%for(var i = 0; i < results.length || i < movie_url.length; i++){%>
+        <li class = "results"><div class="card">
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><h5><%= results[i] %></h5></span>
+              </div>
+
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src=<%= movie_url[i] %>>
+              </div>
+                
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><%= results[i] %></span>
+                <div class = "content">
+                  <h4>Overview</h4>
+                  <p><%= description[i] %></p>
+                  <h4>Rating: <%= rating[i] %>/10</h4>
+                </div>
+              </div>
+            </div>
+          </li>
+    <%}%>
+</ul>
+
+
+
+
+
+
+<%- include ("partials/footer") %>

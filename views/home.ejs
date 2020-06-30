@@ -1,0 +1,15 @@
+<%- include ("partials/header") %>
+
+<div class="row">
+  <div class="col s12 m6">
+      <div class="card-content white-text">
+        <form action="/results.ejs" method="POST" class = "form">
+          <input type = "text" class = "input-movie" placeholder = "Search for a movie or a TV Show" name = "moviename"></input>
+          <button type = "submit" class = "btn">Search</button>
+        </form>
+    </div>
+</div>
+
+
+
+<%- include ("partials/footer") %>
