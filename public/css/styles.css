@@ -248,10 +248,9 @@ a {
 
 @media (max-width: 1080px)
 {
-    .afterbody
+    body
     {
-        background-image: url(/images/bg_mobile.png);
-        background-position: center;
+        background-image: none;
     }
     #bg
     {
@@ -270,7 +269,9 @@ a {
     }
     .resultlist .results
     {
-        width: 40%;
+        margin: 5% 0;
+        padding: 0;
+        width: 48%;
     }
     .resultlist .results .card-img
     {
