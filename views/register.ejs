@@ -1,0 +1,28 @@
+<%- include ("partials/header") %>
+
+<h1>Register here!</h1>
+<div class="row">
+    <div class="col s12">
+      <div class="card register">
+        <div class="card-image">
+          <img src="images/User_Avatar.png" class = "avatar">
+        </div>
+        <div class="card-content">
+          <form action = "/register" method="POST" class = "regform">
+            <div class = "leftlog">
+                <label for = "email">Email</label>
+                <input type = "email" name = "email">
+                <label for = "password">Password</label>
+                <input type = "password" name = "password">
+                <button type = "submit" id = "submit">Register</button>
+            </div>
+            <div class = "rightlog">
+                <h5>Or login through:</h5>
+                <a href = "#"><img src = "/images/google.png" class = "login"></a>
+                <a href = "#"><img src = "/images/facebook.png" class = "login"></a>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,11 +1,14 @@
 <%- include ("partials/header") %>
 
-<ul> 
-  <h4>We found the following results for "<%= query %>"</h4>
-  <p>Touch on the images for more info.</p>
-  <p>Then touch on the title to view the poster.</p>
+<ul class = "resultlist"> 
     <%for(var i = 0; i < results.length || i < movie_url.length; i++){%>
-        <li class = "results"><div class="card">
+        <li class = "results">
+          <div class = "card-img">
+            <img class="movie-poster" src=<%= movie_url[i] %>>
+            <h4 class = "movie-name"><%= results[i] %></h4>
+          </div>
+          
+          <!-- <div class="Middle">
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4"><h5><%= results[i] %></h5></span>
               </div>
@@ -22,7 +25,7 @@
                   <h4>Rating: <%= rating[i] %>/10</h4>
                 </div>
               </div>
-            </div>
+            </div> -->
           </li>
     <%}%>
 </ul>
