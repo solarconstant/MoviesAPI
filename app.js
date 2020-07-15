@@ -51,7 +51,7 @@ app.post('/results.ejs', (req, res) =>
     overview = [];
     avg_rating= [];
     const m_name = req.body.moviename;
-    const api_key = '51890a1c9ebe74b155af180ae9766879';
+    const api_key = process.env.APIKEY;
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&query=${m_name}`;
     const config_url = `https://api.themoviedb.org/3/configuration?api_key=${api_key}`;
     https.get(url, (response) =>
