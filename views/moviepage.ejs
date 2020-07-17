@@ -1,0 +1,42 @@
+<%- include ("partials/header") %>
+
+
+<div class = "overview">
+    <div class = "overlay">
+        <img src = <%= backdrop %> class = "backdrop">
+    </div>
+    
+    <div class = "quickinfo">
+        <div class = "underlay">
+            <img class="movie-poster" src=<%= movie_poster %>>
+            <div class = "mobilemovie">
+                <h1 class = "moviename"><%= moviename %></h1>
+                <h2>(<%= year  %>)</h2>
+            </div>
+            <div class = "reststuff">
+            <h2>Overview:</h2>
+            <p><%= description %></p>
+            <h3>Genres:</h3>
+            <ul class = "genre">
+            <%for(var i = 0; i < genres.length;  i++){%>
+                <li><%= genres[i] %></li>
+            <%}%>
+            </ul>
+            <h3>Our Rating:</h3>
+            <span>
+                <p><%= rating %></p>
+                <% var rating_floor = Number(rating); var rating_partial = rating - Number(rating) %>
+                <%for(var i = 1; i < Number(rating); i++){%>
+                     <img src = '/images/rating_box.png' class = "rating"/> 
+                <%}%>
+                <% if(rating_partial === 0){%>
+                     <img src = '/images/rating_box_partial.png' class = "rating"/> 
+                <%}%>
+            </span>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include ("partials/footer") %>

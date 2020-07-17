@@ -17,12 +17,6 @@ ul {
 }
 
 
-h2,
-h3,
-a {
-	color: #F3CE13;
-}
-
 a {
     text-decoration: none;
 }
@@ -75,16 +69,16 @@ a {
 	border-radius: 5px;
 }
 
-#bg
-{
-    margin-top: 0;
-    text-align: center;
-    z-index: -1;
-    height: 500px;
-    position: absolute;
-    top: 150px;
-    left: 500px;
-}
+/* #bg */
+/* { */
+    /* margin-top: 0; */
+    /* text-align: center; */
+    /* z-index: -1; */
+    /* height: 500px; */
+    /* position: absolute; */
+    /* top: 150px; */
+    /* left: 500px; */
+/* } */
 
 .form
 {
@@ -138,6 +132,10 @@ a {
     border-top-style: solid;border-bottom-style: solid;
     border-color: gray;
     border-radius: 20%;
+}
+.resultlist .results .card-img a
+{
+    color: black;
 }
 
 .resultlist .results .card-img .movie-poster
@@ -217,6 +215,91 @@ a {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+
+/* moviepage */
+.overview .overlay {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+.overview .overlay .backdrop
+{
+    z-index: -1;
+    width: 100%;
+    height: 50%;
+    opacity: 50%;
+}
+
+.overview .movie-poster
+{
+    position: absolute;
+    top: 17%;
+    left: -50%;
+    transform: scale(1.75);
+    box-shadow: 5px 5px 10px #000;
+}
+
+.overview .movie-poster
+{
+    display: inline-block;
+}
+
+.overview .quickinfo
+{
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    color: #fff;
+    text-align: left;
+    width: 50%;
+    line-height: 30px;
+}
+
+.overview .quickinfo h1
+{
+    font-size: 25px;
+}
+
+.overview .quickinfo h2
+{
+    color: #d6cece;
+}
+
+.overview .quickinfo h3
+{
+    color: #d6cece;
+}
+
+.overview .quickinfo p
+{
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.overview .quickinfo ul li
+{
+    display: inline-block;
+}
+
+.overview .quickinfo .underlay
+{
+    z-index: -1;
+    background-color: black;
+    opacity: 75%;
+    padding: 5%;
+    border-radius: 2.5%;
+}
+
+.overview .quickinfo .rating
+{
+    height: 20px;
+    width: 20px;
+    display: inline;
+}
 /* ================================= 
   Media Queries
 ==================================== */
@@ -250,7 +333,7 @@ a {
 {
     body
     {
-        background-image: none;
+        background-image: url(/images/bg_mobile.png);
     }
     #bg
     {
@@ -285,5 +368,56 @@ a {
     .movie-name
     {
         font-size: 15px;
+    }
+
+    .overview .overlay
+    {
+        display: block;
+        width: 100%;
+    }
+    .overview .h2
+    {
+        margin: 0;
+        padding: 0;
+    }
+    .overview .quickinfo
+    {
+        position: relative;
+        width: 100%;
+        float: right;
+        right: 0;
+    }
+    .overview .quickinfo .mobilemovie
+    {
+        position: relative;
+        float: right;
+        width: 70%;
+        right: 0;
+        margin: 0;
+    }
+    .overview .quickinfo .mobilemovie .moviename
+    {
+        margin: 0;
+    }
+    .overview .quickinfo .reststuff
+    {
+        top:0;
+    }
+    .overview .overlay .backdrop
+    {
+        width: 100%;
+        height: 50%;
+        opacity: 50%;
+    }
+    .overview .movie-poster
+    {
+        transform: scale(1);
+        top: 0;
+        right: 0;
+        left: 0;
+        float: left;
+        height: 20%;
+        margin: 5%;
+        margin-bottom: 20px;
     }
 }
