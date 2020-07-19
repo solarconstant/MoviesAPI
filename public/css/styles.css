@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     background-image: url(/images/bg2.png);
     background-size: cover;
+    background-color: #353030;
 }
 ul {
   margin: 0;
@@ -93,7 +94,7 @@ a {
     height: 2.5rem;
     border-style: none;
     border-bottom-style: ridge;
-    border-color: black;
+    border-color: #F3CE13;
     background-color: transparent;
 }
 
@@ -218,86 +219,46 @@ a {
 
 
 /* moviepage */
-.overview .overlay {
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    background: #000;
-}
-.overview .overlay .backdrop
+.backdrop-mobile
 {
-    z-index: -1;
-    width: 100%;
-    height: 50%;
-    opacity: 50%;
+    display: none;
 }
-
-.overview .movie-poster
+table
 {
-    position: absolute;
-    top: 17%;
-    left: -50%;
-    transform: scale(1.75);
-    box-shadow: 5px 5px 10px #000;
-}
-
-.overview .movie-poster
-{
-    display: inline-block;
-}
-
-.overview .quickinfo
-{
-    display: inline-block;
-    position: absolute;
-    top: 35%;
-    right: 15%;
-    color: #fff;
+    margin: 0;
+    padding: 0;
     text-align: left;
-    width: 50%;
-    line-height: 30px;
+    background-size: cover;
+    height: 100vh;
 }
-
-.overview .quickinfo h1
+tr
 {
-    font-size: 25px;
+    margin-top: 5%;
+    color: rgb(255, 255, 255);
 }
-
-.overview .quickinfo h2
+td:first-child
 {
-    color: #d6cece;
+    width: 30%;
+    padding-left: 10%;
+    padding-right: 5%;
 }
-
-.overview .quickinfo h3
+td:last-child
 {
-    color: #d6cece;
+    width: 60%;
+    padding-right: 10%;
+    padding-left: 5%;
 }
-
-.overview .quickinfo p
+td p
 {
-    width: 100%;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 20px;
 }
-
-.overview .quickinfo ul li
-{
-    display: inline-block;
-}
-
-.overview .quickinfo .underlay
-{
-    z-index: -1;
-    background-color: black;
-    opacity: 75%;
-    padding: 5%;
-    border-radius: 2.5%;
-}
-
-.overview .quickinfo .rating
+.rating
 {
     height: 20px;
     width: 20px;
+}
+.genreitem
+{
     display: inline;
 }
 /* ================================= 
@@ -369,55 +330,29 @@ a {
     {
         font-size: 15px;
     }
-
-    .overview .overlay
+    td
     {
-        display: block;
-        width: 100%;
+        text-align: center;
     }
-    .overview .h2
+    td:first-child
     {
-        margin: 0;
+        width: 100%;
         padding: 0;
+        display: block;
     }
-    .overview .quickinfo
-    {
-        position: relative;
-        width: 100%;
-        float: right;
-        right: 0;
-    }
-    .overview .quickinfo .mobilemovie
-    {
-        position: relative;
-        float: right;
-        width: 70%;
-        right: 0;
-        margin: 0;
-    }
-    .overview .quickinfo .mobilemovie .moviename
-    {
-        margin: 0;
-    }
-    .overview .quickinfo .reststuff
-    {
-        top:0;
-    }
-    .overview .overlay .backdrop
+    td:last-child
     {
         width: 100%;
-        height: 50%;
-        opacity: 50%;
+        padding: 0;
+        display: block;
     }
-    .overview .movie-poster
+    .backdrop-mobile
     {
-        transform: scale(1);
-        top: 0;
-        right: 0;
-        left: 0;
-        float: left;
-        height: 20%;
-        margin: 5%;
-        margin-bottom: 20px;
+        width: 100%;
+        display: block;
+        height: 30vh;
     }
 }
+
+
+/*Animations*/

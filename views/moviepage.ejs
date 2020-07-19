@@ -1,42 +1,41 @@
 <%- include ("partials/header") %>
 
-
-<div class = "overview">
-    <div class = "overlay">
-        <img src = <%= backdrop %> class = "backdrop">
-    </div>
-    
-    <div class = "quickinfo">
-        <div class = "underlay">
-            <img class="movie-poster" src=<%= movie_poster %>>
-            <div class = "mobilemovie">
-                <h1 class = "moviename"><%= moviename %></h1>
-                <h2>(<%= year  %>)</h2>
-            </div>
-            <div class = "reststuff">
+<img src = <%= backdrop %> class = "backdrop-mobile">
+<table style="background-image: url(<%= backdrop %>);">
+    <tr>
+        <td>
+                <img class="movie-poster" src=<%= movie_poster %>>
+        </td>
+        <td>
+            <div class = "underlay">
             <h2>Overview:</h2>
             <p><%= description %></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h1 class = "moviename"><%= moviename %></h1>
+            <h2>(<%= year  %>)</h2>
+        </td>
+        <td>
             <h3>Genres:</h3>
             <ul class = "genre">
             <%for(var i = 0; i < genres.length;  i++){%>
-                <li><%= genres[i] %></li>
+                <li class = "genreitem"><%= genres[i] %></li>
             <%}%>
             </ul>
             <h3>Our Rating:</h3>
-            <span>
-                <p><%= rating %></p>
+                <p class><%= rating %></p>
                 <% var rating_floor = Number(rating); var rating_partial = rating - Number(rating) %>
                 <%for(var i = 1; i < Number(rating); i++){%>
-                     <img src = '/images/rating_box.png' class = "rating"/> 
+                    <img src = '/images/rating_box.png' class = "rating"/> 
                 <%}%>
                 <% if(rating_partial === 0){%>
-                     <img src = '/images/rating_box_partial.png' class = "rating"/> 
+                    <img src = '/images/rating_box_partial.png' class = "rating"/> 
                 <%}%>
-            </span>
-        </div>
-        </div>
-    </div>
-</div>
-
+        </td>
+    </tr>
+</table>
 
 <%- include ("partials/footer") %>
